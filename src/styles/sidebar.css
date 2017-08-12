@@ -6,4 +6,25 @@
 	padding: 5px;
 	background: #444;
 	z-index: 1000;
+	color: #EEE;
+	font-size: 14px;
+}
+
+#sidebar h2 {
+	color: #FFF;
+	padding: 5px 0;
+	font-weight: normal;
+}
+
+#sidebar a {
+	color: #DDD;
+	padding: 3px;
+}
+#sidebar a:hover,
+#sidebar .selected {
+	background: #666;
+}
+#sidebar a:active {
+	background: #888;
+	color: #FFF;
 }

@@ -22850,8 +22850,10 @@ module.exports = ReactDOMInvalidARIAHook;
 
 
 Object.defineProperty(exports, "__esModule", {
-		value: true
+	value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(16);
 
@@ -22865,18 +22867,61 @@ var _dashboard = __webpack_require__(191);
 
 var _dashboard2 = _interopRequireDefault(_dashboard);
 
+var _d = __webpack_require__(206);
+
+var d3 = _interopRequireWildcard(_d);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 __webpack_require__(200);
 
-var Main = function Main() {
-		return _react2.default.createElement(
+var Main = function (_React$Component) {
+	_inherits(Main, _React$Component);
+
+	function Main(props) {
+		_classCallCheck(this, Main);
+
+		var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
+
+		_this.state = {};
+		d3.json('https://jsonplaceholder.typicode.com/posts/1', function (err, data) {
+			if (err) {
+				console.log(err);
+			} else {
+				_this.setState({ data: data });
+			}
+		});
+		return _this;
+	}
+
+	_createClass(Main, [{
+		key: 'render',
+		value: function render() {
+			var data = this.state.data;
+
+			return _react2.default.createElement(
 				'div',
 				{ id: 'main' },
-				_react2.default.createElement(_sidebar2.default, null),
-				_react2.default.createElement(_dashboard2.default, null)
-		);
-};
+				_react2.default.createElement(_sidebar2.default, { groupBy: 'Nothing', aggregateBy: 'Day', uniqueness: 'Total' }),
+				data ? _react2.default.createElement(_dashboard2.default, { data: data }) : _react2.default.createElement(
+					'h2',
+					null,
+					'Connecting to the server'
+				)
+			);
+		}
+	}]);
+
+	return Main;
+}(_react2.default.Component);
 
 exports.default = Main;
 
@@ -22888,7 +22933,7 @@ exports.default = Main;
 
 
 Object.defineProperty(exports, "__esModule", {
-		value: true
+	value: true
 });
 
 var _react = __webpack_require__(16);
@@ -22899,8 +22944,135 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 __webpack_require__(188);
 
-var Sidebar = function Sidebar() {
-		return _react2.default.createElement('div', { id: 'sidebar' });
+var Sidebar = function Sidebar(_ref) {
+	var groupBy = _ref.groupBy,
+	    aggregateBy = _ref.aggregateBy,
+	    uniqueness = _ref.uniqueness;
+	return _react2.default.createElement(
+		'div',
+		{ id: 'sidebar' },
+		_react2.default.createElement(
+			'div',
+			{ id: 'group-by' },
+			_react2.default.createElement(
+				'h2',
+				null,
+				'Group by'
+			),
+			_react2.default.createElement(
+				'ul',
+				null,
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: groupBy === 'Nothing' ? 'selected' : '' },
+						'Nothing'
+					)
+				),
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: groupBy === 'Publication' ? 'selected' : '' },
+						'Publication'
+					)
+				),
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: groupBy === 'Channel' ? 'selected' : '' },
+						'Channel'
+					)
+				),
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: groupBy === 'Platform' ? 'selected' : '' },
+						'Platform'
+					)
+				)
+			),
+			_react2.default.createElement('div', { id: 'group-items' })
+		),
+		_react2.default.createElement(
+			'div',
+			{ id: 'time' },
+			_react2.default.createElement(
+				'h2',
+				null,
+				'Aggregate by'
+			),
+			_react2.default.createElement(
+				'ul',
+				null,
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: aggregateBy === 'Day' ? 'selected' : '' },
+						'Day'
+					)
+				),
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: aggregateBy === 'Hour' ? 'selected' : '' },
+						'Hour'
+					)
+				),
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: aggregateBy === 'DayHour' ? 'selected' : '' },
+						'Day and hour'
+					)
+				)
+			)
+		),
+		_react2.default.createElement(
+			'div',
+			{ id: 'uniqueness' },
+			_react2.default.createElement(
+				'h2',
+				null,
+				'Total or unique visits'
+			),
+			_react2.default.createElement(
+				'ul',
+				null,
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: uniqueness === 'Total' ? 'selected' : '' },
+						'Total'
+					)
+				),
+				_react2.default.createElement(
+					'li',
+					null,
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: uniqueness === 'Unique' ? 'selected' : '' },
+						'Unique'
+					)
+				)
+			)
+		)
+	);
 };
 
 exports.default = Sidebar;
@@ -22945,7 +23117,7 @@ exports = module.exports = __webpack_require__(21)(undefined);
 
 
 // module
-exports.push([module.i, "#sidebar {\n\theight: 100%;\n\twidth: 19%;\n\tmargin-right: 1%;\n\tfloat: left;\n\tpadding: 5px;\n\tbackground: #444;\n\tz-index: 1000;\n}", ""]);
+exports.push([module.i, "#sidebar {\n\theight: 100%;\n\twidth: 19%;\n\tmargin-right: 1%;\n\tfloat: left;\n\tpadding: 5px;\n\tbackground: #444;\n\tz-index: 1000;\n\tcolor: #EEE;\n\tfont-size: 14px;\n}\n\n#sidebar h2 {\n\tcolor: #FFF;\n\tpadding: 5px 0;\n\tfont-weight: normal;\n}\n\n#sidebar a {\n\tcolor: #DDD;\n\tpadding: 3px;\n}\n#sidebar a:hover,\n#sidebar .selected {\n\tbackground: #666;\n}\n#sidebar a:active {\n\tbackground: #888;\n\tcolor: #FFF;\n}", ""]);
 
 // exports
 
@@ -23075,7 +23247,7 @@ __webpack_require__(198);
 var streamgraphData = { "dimensions": { "days": { "id": "day", "members": [1, 2, 3, 4, 5, 6, 7] }, "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "day": 1, "publication": 0, "totalVisits": 26, "uniqueVisits": 21 }, { "day": 1, "publication": 1, "totalVisits": 18, "uniqueVisits": 4 }, { "day": 1, "publication": 2, "totalVisits": 22, "uniqueVisits": 3 }, { "day": 1, "publication": 3, "totalVisits": 55, "uniqueVisits": 24 }, { "day": 1, "publication": 4, "totalVisits": 91, "uniqueVisits": 38 }, { "day": 1, "publication": 5, "totalVisits": 26, "uniqueVisits": 13 }, { "day": 1, "publication": 6, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 1, "publication": 7, "totalVisits": 14, "uniqueVisits": 13 }, { "day": 1, "publication": 8, "totalVisits": 77, "uniqueVisits": 18 }, { "day": 1, "publication": 9, "totalVisits": 30, "uniqueVisits": 19 }, { "day": 2, "publication": 0, "totalVisits": 52, "uniqueVisits": 31 }, { "day": 2, "publication": 1, "totalVisits": 5, "uniqueVisits": 1 }, { "day": 2, "publication": 2, "totalVisits": 75, "uniqueVisits": 33 }, { "day": 2, "publication": 3, "totalVisits": 33, "uniqueVisits": 21 }, { "day": 2, "publication": 4, "totalVisits": 60, "uniqueVisits": 32 }, { "day": 2, "publication": 5, "totalVisits": 1, "uniqueVisits": 1 }, { "day": 2, "publication": 6, "totalVisits": 91, "uniqueVisits": 8 }, { "day": 2, "publication": 7, "totalVisits": 69, "uniqueVisits": 53 }, { "day": 2, "publication": 8, "totalVisits": 91, "uniqueVisits": 66 }, { "day": 2, "publication": 9, "totalVisits": 10, "uniqueVisits": 6 }, { "day": 3, "publication": 0, "totalVisits": 9, "uniqueVisits": 5 }, { "day": 3, "publication": 1, "totalVisits": 57, "uniqueVisits": 16 }, { "day": 3, "publication": 2, "totalVisits": 82, "uniqueVisits": 11 }, { "day": 3, "publication": 3, "totalVisits": 50, "uniqueVisits": 2 }, { "day": 3, "publication": 4, "totalVisits": 40, "uniqueVisits": 21 }, { "day": 3, "publication": 5, "totalVisits": 8, "uniqueVisits": 7 }, { "day": 3, "publication": 6, "totalVisits": 10, "uniqueVisits": 4 }, { "day": 3, "publication": 7, "totalVisits": 37, "uniqueVisits": 21 }, { "day": 3, "publication": 8, "totalVisits": 51, "uniqueVisits": 37 }, { "day": 3, "publication": 9, "totalVisits": 45, "uniqueVisits": 19 }, { "day": 4, "publication": 0, "totalVisits": 86, "uniqueVisits": 54 }, { "day": 4, "publication": 1, "totalVisits": 96, "uniqueVisits": 39 }, { "day": 4, "publication": 2, "totalVisits": 39, "uniqueVisits": 35 }, { "day": 4, "publication": 3, "totalVisits": 98, "uniqueVisits": 38 }, { "day": 4, "publication": 4, "totalVisits": 59, "uniqueVisits": 17 }, { "day": 4, "publication": 5, "totalVisits": 16, "uniqueVisits": 14 }, { "day": 4, "publication": 6, "totalVisits": 75, "uniqueVisits": 4 }, { "day": 4, "publication": 7, "totalVisits": 44, "uniqueVisits": 6 }, { "day": 4, "publication": 8, "totalVisits": 70, "uniqueVisits": 7 }, { "day": 4, "publication": 9, "totalVisits": 68, "uniqueVisits": 51 }, { "day": 5, "publication": 0, "totalVisits": 93, "uniqueVisits": 62 }, { "day": 5, "publication": 1, "totalVisits": 53, "uniqueVisits": 33 }, { "day": 5, "publication": 2, "totalVisits": 75, "uniqueVisits": 32 }, { "day": 5, "publication": 3, "totalVisits": 50, "uniqueVisits": 49 }, { "day": 5, "publication": 4, "totalVisits": 80, "uniqueVisits": 29 }, { "day": 5, "publication": 5, "totalVisits": 20, "uniqueVisits": 7 }, { "day": 5, "publication": 6, "totalVisits": 69, "uniqueVisits": 46 }, { "day": 5, "publication": 7, "totalVisits": 19, "uniqueVisits": 15 }, { "day": 5, "publication": 8, "totalVisits": 36, "uniqueVisits": 35 }, { "day": 5, "publication": 9, "totalVisits": 82, "uniqueVisits": 51 }, { "day": 6, "publication": 0, "totalVisits": 10, "uniqueVisits": 3 }, { "day": 6, "publication": 1, "totalVisits": 92, "uniqueVisits": 13 }, { "day": 6, "publication": 2, "totalVisits": 14, "uniqueVisits": 5 }, { "day": 6, "publication": 3, "totalVisits": 59, "uniqueVisits": 5 }, { "day": 6, "publication": 4, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 6, "publication": 5, "totalVisits": 56, "uniqueVisits": 20 }, { "day": 6, "publication": 6, "totalVisits": 35, "uniqueVisits": 8 }, { "day": 6, "publication": 7, "totalVisits": 9, "uniqueVisits": 3 }, { "day": 6, "publication": 8, "totalVisits": 27, "uniqueVisits": 6 }, { "day": 6, "publication": 9, "totalVisits": 31, "uniqueVisits": 18 }, { "day": 7, "publication": 0, "totalVisits": 2, "uniqueVisits": 0 }, { "day": 7, "publication": 1, "totalVisits": 26, "uniqueVisits": 16 }, { "day": 7, "publication": 2, "totalVisits": 93, "uniqueVisits": 72 }, { "day": 7, "publication": 3, "totalVisits": 85, "uniqueVisits": 3 }, { "day": 7, "publication": 4, "totalVisits": 54, "uniqueVisits": 22 }, { "day": 7, "publication": 5, "totalVisits": 34, "uniqueVisits": 21 }, { "day": 7, "publication": 6, "totalVisits": 37, "uniqueVisits": 14 }, { "day": 7, "publication": 7, "totalVisits": 2, "uniqueVisits": 2 }, { "day": 7, "publication": 8, "totalVisits": 9, "uniqueVisits": 9 }, { "day": 7, "publication": 9, "totalVisits": 84, "uniqueVisits": 64 }] };
 var verticalBarchartData = { "dimensions": { "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "publication": 0, "totalVisits": 64, "uniqueVisits": 53 }, { "publication": 1, "totalVisits": 2, "uniqueVisits": 2 }, { "publication": 2, "totalVisits": 76, "uniqueVisits": 1 }, { "publication": 3, "totalVisits": 58, "uniqueVisits": 55 }, { "publication": 4, "totalVisits": 5, "uniqueVisits": 3 }, { "publication": 5, "totalVisits": 41, "uniqueVisits": 15 }, { "publication": 6, "totalVisits": 9, "uniqueVisits": 4 }, { "publication": 7, "totalVisits": 27, "uniqueVisits": 26 }, { "publication": 8, "totalVisits": 36, "uniqueVisits": 13 }, { "publication": 9, "totalVisits": 68, "uniqueVisits": 42 }] };
 
-var Dashboard = function Dashboard() {
+var Dashboard = function Dashboard(data) {
 	return _react2.default.createElement(
 		'div',
 		{ id: 'dashboard' },
@@ -23454,7 +23626,7 @@ exports = module.exports = __webpack_require__(21)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n\tpadding: 0;\n\tmargin: 0;\n\tcolor: #444;\n\tbox-sizing: border-box;\n\tfont-family: Open Sans;\n}\n\nul {\n\tlist-style: none;\n}\n\nbody {\n\tbackground: #EEE;\n\theight: 100%;\n}\n\nhtml {\n\theight: 100%;\n}\n\n#app {\n\theight: 100%;\n}", ""]);
+exports.push([module.i, "* {\n\tpadding: 0;\n\tmargin: 0;\n\tcolor: #444;\n\tbox-sizing: border-box;\n\tfont-family: Open Sans;\n}\n\nul {\n\tlist-style: none;\n}\n\nbody {\n\tbackground: #EEE;\n\theight: 100%;\n}\n\nhtml {\n\theight: 100%;\n}\n\na {\n\ttext-decoration: none;\n\tdisplay: block;\n}\n\n#app {\n\theight: 100%;\n}", ""]);
 
 // exports
 
@@ -23537,7 +23709,7 @@ exports.default = function (div, _ref, _ref2) {
     var svg = (0, _utils.selectOrAppend)(d3.select(div), 'svg');
 
     // Presentation
-    var publicationPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse();
+    var groupPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse();
 
     var _svg$node = svg.node(),
         clientWidth = _svg$node.clientWidth,
@@ -23559,6 +23731,7 @@ exports.default = function (div, _ref, _ref2) {
 
     // Scale
     var x = d3.scaleLinear().domain([0, dimension.members.length - 1]).range([0, chartWidth]).nice();
+    var offsetToDimension = x.invert;
     var y = d3.scaleLinear().domain([d3.min(stack[0], function (_ref3) {
         var _ref4 = _slicedToArray(_ref3, 1),
             d = _ref4[0];
@@ -23573,7 +23746,9 @@ exports.default = function (div, _ref, _ref2) {
     })]).range([chartHeight, 0]);
 
     // Axis
-    var xAxis = d3.axisBottom(x).ticks(dimension.members.length);
+    var xAxis = d3.axisBottom(x).ticks(dimension.members.length).tickFormat(function (_, index) {
+        return dimension.members[index];
+    });
 
     var area = d3.area().curve(d3.curveCardinal).x(function (d, index) {
         return x(index);
@@ -23599,12 +23774,18 @@ exports.default = function (div, _ref, _ref2) {
     var streams = (0, _utils.selectOrAppend)(streamGraph, 'g.chart').selectAll('path.segment').data(series.members);
 
     streams.exit().remove();
-    streams.enter().append('path').classed('segment', true).classed('autostyle', true).merge(streams).style('fill', function (publication) {
-        return publicationPalette[publication];
-    }).style('stroke', function (publication) {
-        return publicationPalette[publication];
+    streams.enter().append('path').classed('segment', true).classed('autostyle', true).merge(streams).style('fill', function (group) {
+        return groupPalette[group];
+    }).style('stroke', function (group) {
+        return groupPalette[group];
     }).attr('d', function (_, index) {
         return area(stack[index]);
+    }).each(function (group) {
+        (0, _utils.addTooltip)(function () {
+            var dimensionIndex = Math.round(offsetToDimension(d3.event.offsetX - margin.left));
+            var dimensionMember = dimension.members[dimensionIndex];
+            return group + ', ' + dimensionMember + ': ' + nestedData[dimensionMember][group];
+        }, d3.select(this));
     });
 };
 

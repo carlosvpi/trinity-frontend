@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
 import { reduce } from 'ramda'
-import { selectOrAppend } from './utils'
+import { selectOrAppend, addTooltip } from './utils'
 
 export default (div, { dimensions, tuples }, { dimensionKey, seriesKey, propName }) => {
     // Data
@@ -21,7 +21,7 @@ export default (div, { dimensions, tuples }, { dimensionKey, seriesKey, propName
     const svg = selectOrAppend(d3.select(div), 'svg')
 
     // Presentation
-    const publicationPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse()
+    const groupPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse()
     const { clientWidth, clientHeight } = svg.node()
     const margin = {
         top: 10,
@@ -43,6 +43,7 @@ export default (div, { dimensions, tuples }, { dimensionKey, seriesKey, propName
         .domain([0, dimension.members.length - 1])
         .range([0, chartWidth])
         .nice()
+    const offsetToDimension = x.invert
     const y = d3.scaleLinear()
         .domain([d3.min(stack[0], ([d]) => d), d3.max(stack[stack.length - 1], ([_, d]) => d)])
         .range([chartHeight, 0])
@@ -50,6 +51,7 @@ export default (div, { dimensions, tuples }, { dimensionKey, seriesKey, propName
     // Axis
     const xAxis = d3.axisBottom(x)
         .ticks(dimension.members.length)
+        .tickFormat((_, index) => dimension.members[index])
 
     const area = d3.area()
         .curve(d3.curveCardinal)
@@ -76,7 +78,14 @@ export default (div, { dimensions, tuples }, { dimensionKey, seriesKey, propName
         .classed('segment', true)
         .classed('autostyle', true)
         .merge(streams)
-        .style('fill', publication => publicationPalette[publication])
-        .style('stroke', publication => publicationPalette[publication])
+        .style('fill', group => groupPalette[group])
+        .style('stroke', group => groupPalette[group])
         .attr('d', (_, index) => area(stack[index]))
+        .each(function(group) {
+            addTooltip(() => {
+                const dimensionIndex = Math.round(offsetToDimension(d3.event.offsetX - margin.left))
+                const dimensionMember = dimension.members[dimensionIndex]
+                return `${group}, ${dimensionMember}: ${nestedData[dimensionMember][group]}`
+            }, d3.select(this))
+        })
 }
