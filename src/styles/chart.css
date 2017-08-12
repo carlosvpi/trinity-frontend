@@ -1,0 +1,53 @@
+svg {
+    height: 100%;
+    width: 100%;
+    background: white;
+    padding: 5px;
+    box-shadow: 0 0 10px #BBB;
+}
+
+svg path:not(.autostyle), svg line:not(.autostyle) {
+    stroke: #444;
+}
+svg text:not(.autostyle) {
+    fill: #444;
+}
+
+svg .distal-axis text {
+    text-anchor: middle;
+}
+svg .distal-axis line,
+svg .distal-axis .domain,
+svg .y-axis .domain {
+    visibility: hidden;
+}
+svg .distal-axis circle,
+svg .y-axis line {
+    stroke-dasharray: 4;
+    stroke: #CCC;
+    fill: none;
+}
+svg .only-labels .domain,
+svg .only-labels line {
+    visibility: hidden;
+}
+
+svg .chart .segment:not(.autostyle) {
+    fill: #26A;
+}
+svg .chart .segment:not(.autostyle) {
+    stroke: none;
+    transition: opacity 0.444s;
+}
+svg .chart:hover .segment {
+    opacity: 0.3;
+}
+svg .chart .segment:hover {
+    opacity: 1;
+}
+
+.tooltip {
+    background: #DDD;
+    padding: 4px;
+    position: absolute;
+}

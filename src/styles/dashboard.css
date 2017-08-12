@@ -1,0 +1,10 @@
+#dashboard {
+	height: 100%;
+	width: 80%;
+	float: left;
+}
+
+#top-row {
+	width: 100%;
+	height: 20%;
+}

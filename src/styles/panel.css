@@ -1,0 +1,16 @@
+.panel {
+	float: left;
+	height: 40%;
+	width: 25%;
+	padding: 8px;
+	overflow: scroll;
+}
+
+.panel.col3 {
+	width: 75%;
+}
+
+.panel.row2 {
+	height: 80%;
+	float: right;
+}
