@@ -22903,7 +22903,8 @@ var Main = function (_React$Component) {
 				todayVisits: 317,
 				todayUniqueVisits: 291,
 				streamData: { "dimensions": { "days": { "id": "day", "members": [1, 2, 3, 4, 5, 6, 7] }, "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "day": 1, "publication": 0, "totalVisits": 26, "uniqueVisits": 21 }, { "day": 1, "publication": 1, "totalVisits": 18, "uniqueVisits": 4 }, { "day": 1, "publication": 2, "totalVisits": 22, "uniqueVisits": 3 }, { "day": 1, "publication": 3, "totalVisits": 55, "uniqueVisits": 24 }, { "day": 1, "publication": 4, "totalVisits": 91, "uniqueVisits": 38 }, { "day": 1, "publication": 5, "totalVisits": 26, "uniqueVisits": 13 }, { "day": 1, "publication": 6, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 1, "publication": 7, "totalVisits": 14, "uniqueVisits": 13 }, { "day": 1, "publication": 8, "totalVisits": 77, "uniqueVisits": 18 }, { "day": 1, "publication": 9, "totalVisits": 30, "uniqueVisits": 19 }, { "day": 2, "publication": 0, "totalVisits": 52, "uniqueVisits": 31 }, { "day": 2, "publication": 1, "totalVisits": 5, "uniqueVisits": 1 }, { "day": 2, "publication": 2, "totalVisits": 75, "uniqueVisits": 33 }, { "day": 2, "publication": 3, "totalVisits": 33, "uniqueVisits": 21 }, { "day": 2, "publication": 4, "totalVisits": 60, "uniqueVisits": 32 }, { "day": 2, "publication": 5, "totalVisits": 1, "uniqueVisits": 1 }, { "day": 2, "publication": 6, "totalVisits": 91, "uniqueVisits": 8 }, { "day": 2, "publication": 7, "totalVisits": 69, "uniqueVisits": 53 }, { "day": 2, "publication": 8, "totalVisits": 91, "uniqueVisits": 66 }, { "day": 2, "publication": 9, "totalVisits": 10, "uniqueVisits": 6 }, { "day": 3, "publication": 0, "totalVisits": 9, "uniqueVisits": 5 }, { "day": 3, "publication": 1, "totalVisits": 57, "uniqueVisits": 16 }, { "day": 3, "publication": 2, "totalVisits": 82, "uniqueVisits": 11 }, { "day": 3, "publication": 3, "totalVisits": 50, "uniqueVisits": 2 }, { "day": 3, "publication": 4, "totalVisits": 40, "uniqueVisits": 21 }, { "day": 3, "publication": 5, "totalVisits": 8, "uniqueVisits": 7 }, { "day": 3, "publication": 6, "totalVisits": 10, "uniqueVisits": 4 }, { "day": 3, "publication": 7, "totalVisits": 37, "uniqueVisits": 21 }, { "day": 3, "publication": 8, "totalVisits": 51, "uniqueVisits": 37 }, { "day": 3, "publication": 9, "totalVisits": 45, "uniqueVisits": 19 }, { "day": 4, "publication": 0, "totalVisits": 86, "uniqueVisits": 54 }, { "day": 4, "publication": 1, "totalVisits": 96, "uniqueVisits": 39 }, { "day": 4, "publication": 2, "totalVisits": 39, "uniqueVisits": 35 }, { "day": 4, "publication": 3, "totalVisits": 98, "uniqueVisits": 38 }, { "day": 4, "publication": 4, "totalVisits": 59, "uniqueVisits": 17 }, { "day": 4, "publication": 5, "totalVisits": 16, "uniqueVisits": 14 }, { "day": 4, "publication": 6, "totalVisits": 75, "uniqueVisits": 4 }, { "day": 4, "publication": 7, "totalVisits": 44, "uniqueVisits": 6 }, { "day": 4, "publication": 8, "totalVisits": 70, "uniqueVisits": 7 }, { "day": 4, "publication": 9, "totalVisits": 68, "uniqueVisits": 51 }, { "day": 5, "publication": 0, "totalVisits": 93, "uniqueVisits": 62 }, { "day": 5, "publication": 1, "totalVisits": 53, "uniqueVisits": 33 }, { "day": 5, "publication": 2, "totalVisits": 75, "uniqueVisits": 32 }, { "day": 5, "publication": 3, "totalVisits": 50, "uniqueVisits": 49 }, { "day": 5, "publication": 4, "totalVisits": 80, "uniqueVisits": 29 }, { "day": 5, "publication": 5, "totalVisits": 20, "uniqueVisits": 7 }, { "day": 5, "publication": 6, "totalVisits": 69, "uniqueVisits": 46 }, { "day": 5, "publication": 7, "totalVisits": 19, "uniqueVisits": 15 }, { "day": 5, "publication": 8, "totalVisits": 36, "uniqueVisits": 35 }, { "day": 5, "publication": 9, "totalVisits": 82, "uniqueVisits": 51 }, { "day": 6, "publication": 0, "totalVisits": 10, "uniqueVisits": 3 }, { "day": 6, "publication": 1, "totalVisits": 92, "uniqueVisits": 13 }, { "day": 6, "publication": 2, "totalVisits": 14, "uniqueVisits": 5 }, { "day": 6, "publication": 3, "totalVisits": 59, "uniqueVisits": 5 }, { "day": 6, "publication": 4, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 6, "publication": 5, "totalVisits": 56, "uniqueVisits": 20 }, { "day": 6, "publication": 6, "totalVisits": 35, "uniqueVisits": 8 }, { "day": 6, "publication": 7, "totalVisits": 9, "uniqueVisits": 3 }, { "day": 6, "publication": 8, "totalVisits": 27, "uniqueVisits": 6 }, { "day": 6, "publication": 9, "totalVisits": 31, "uniqueVisits": 18 }, { "day": 7, "publication": 0, "totalVisits": 2, "uniqueVisits": 0 }, { "day": 7, "publication": 1, "totalVisits": 26, "uniqueVisits": 16 }, { "day": 7, "publication": 2, "totalVisits": 93, "uniqueVisits": 72 }, { "day": 7, "publication": 3, "totalVisits": 85, "uniqueVisits": 3 }, { "day": 7, "publication": 4, "totalVisits": 54, "uniqueVisits": 22 }, { "day": 7, "publication": 5, "totalVisits": 34, "uniqueVisits": 21 }, { "day": 7, "publication": 6, "totalVisits": 37, "uniqueVisits": 14 }, { "day": 7, "publication": 7, "totalVisits": 2, "uniqueVisits": 2 }, { "day": 7, "publication": 8, "totalVisits": 9, "uniqueVisits": 9 }, { "day": 7, "publication": 9, "totalVisits": 84, "uniqueVisits": 64 }] },
-				topPublications: { "dimensions": { "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "publication": 0, "totalVisits": 64, "uniqueVisits": 53 }, { "publication": 1, "totalVisits": 2, "uniqueVisits": 2 }, { "publication": 2, "totalVisits": 76, "uniqueVisits": 1 }, { "publication": 3, "totalVisits": 58, "uniqueVisits": 55 }, { "publication": 4, "totalVisits": 5, "uniqueVisits": 3 }, { "publication": 5, "totalVisits": 41, "uniqueVisits": 15 }, { "publication": 6, "totalVisits": 9, "uniqueVisits": 4 }, { "publication": 7, "totalVisits": 27, "uniqueVisits": 26 }, { "publication": 8, "totalVisits": 36, "uniqueVisits": 13 }, { "publication": 9, "totalVisits": 68, "uniqueVisits": 42 }] }
+				topPublications: { "dimensions": { "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "publication": 0, "totalVisits": 64, "uniqueVisits": 53 }, { "publication": 1, "totalVisits": 2, "uniqueVisits": 2 }, { "publication": 2, "totalVisits": 76, "uniqueVisits": 1 }, { "publication": 3, "totalVisits": 58, "uniqueVisits": 55 }, { "publication": 4, "totalVisits": 5, "uniqueVisits": 3 }, { "publication": 5, "totalVisits": 41, "uniqueVisits": 15 }, { "publication": 6, "totalVisits": 9, "uniqueVisits": 4 }, { "publication": 7, "totalVisits": 27, "uniqueVisits": 26 }, { "publication": 8, "totalVisits": 36, "uniqueVisits": 13 }, { "publication": 9, "totalVisits": 68, "uniqueVisits": 42 }] },
+				scatterData: { "dimensions": { "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] } }, "tuples": [{ "publication": 0, "articles": 56.356125259059134, "visits": 41.52855901716349 }, { "publication": 1, "articles": 3.6300659303754608, "visits": 5.529189996761561 }, { "publication": 2, "articles": 74.65124489559973, "visits": 76.41934543834424 }, { "publication": 3, "articles": 21.40513528816402, "visits": 22.834595216252506 }, { "publication": 4, "articles": 62.015649039047574, "visits": 75.652036770477 }, { "publication": 5, "articles": 55.39976321551503, "visits": 54.19049773991167 }, { "publication": 6, "articles": 71.47491419173402, "visits": 71.9924917086849 }, { "publication": 7, "articles": 70.79521064938695, "visits": 72.28469669220094 }, { "publication": 8, "articles": 24.870397986896222, "visits": 19.53628527431063 }, { "publication": 9, "articles": 18.598401451835244, "visits": 26.75344780841214 }, { "publication": 10, "articles": 52.000247360323456, "visits": 40.71300740563889 }, { "publication": 11, "articles": 40.248196867699946, "visits": 34.57441542168652 }, { "publication": 12, "articles": 4.410387467727807, "visits": -2.4278061563681215 }, { "publication": 13, "articles": 16.049248662790717, "visits": 16.67882257243211 }, { "publication": 14, "articles": 3.2674908376516205, "visits": 4.337149338234233 }, { "publication": 15, "articles": 12.920647699189082, "visits": 24.468611796621982 }, { "publication": 16, "articles": 20.328475034404327, "visits": 14.074444800980126 }, { "publication": 17, "articles": 83.02342110946525, "visits": 81.82291943695145 }, { "publication": 18, "articles": 97.27742358770793, "visits": 96.58059610621196 }, { "publication": 19, "articles": 90.95084326574239, "visits": 88.40382918907424 }] }
 			}
 		};
 		_this.state.data.radialData = _this.state.data.streamData;
@@ -22925,7 +22926,7 @@ var Main = function (_React$Component) {
 			this.setState({ connecting: this.state.connecting });
 			d3.json('http://localhost:4567/get?uniq=' + uniq + '&period=' + period + '&group=' + group, function (err, data) {
 				if (err) {
-					console.err(err);
+					console.error(err);
 					// Mock server
 					// data = mockServer(uniq, period, group)
 				} else {
@@ -23288,9 +23289,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 __webpack_require__(198);
 
-var streamgraphData = { "dimensions": { "days": { "id": "day", "members": [1, 2, 3, 4, 5, 6, 7] }, "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "day": 1, "publication": 0, "totalVisits": 26, "uniqueVisits": 21 }, { "day": 1, "publication": 1, "totalVisits": 18, "uniqueVisits": 4 }, { "day": 1, "publication": 2, "totalVisits": 22, "uniqueVisits": 3 }, { "day": 1, "publication": 3, "totalVisits": 55, "uniqueVisits": 24 }, { "day": 1, "publication": 4, "totalVisits": 91, "uniqueVisits": 38 }, { "day": 1, "publication": 5, "totalVisits": 26, "uniqueVisits": 13 }, { "day": 1, "publication": 6, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 1, "publication": 7, "totalVisits": 14, "uniqueVisits": 13 }, { "day": 1, "publication": 8, "totalVisits": 77, "uniqueVisits": 18 }, { "day": 1, "publication": 9, "totalVisits": 30, "uniqueVisits": 19 }, { "day": 2, "publication": 0, "totalVisits": 52, "uniqueVisits": 31 }, { "day": 2, "publication": 1, "totalVisits": 5, "uniqueVisits": 1 }, { "day": 2, "publication": 2, "totalVisits": 75, "uniqueVisits": 33 }, { "day": 2, "publication": 3, "totalVisits": 33, "uniqueVisits": 21 }, { "day": 2, "publication": 4, "totalVisits": 60, "uniqueVisits": 32 }, { "day": 2, "publication": 5, "totalVisits": 1, "uniqueVisits": 1 }, { "day": 2, "publication": 6, "totalVisits": 91, "uniqueVisits": 8 }, { "day": 2, "publication": 7, "totalVisits": 69, "uniqueVisits": 53 }, { "day": 2, "publication": 8, "totalVisits": 91, "uniqueVisits": 66 }, { "day": 2, "publication": 9, "totalVisits": 10, "uniqueVisits": 6 }, { "day": 3, "publication": 0, "totalVisits": 9, "uniqueVisits": 5 }, { "day": 3, "publication": 1, "totalVisits": 57, "uniqueVisits": 16 }, { "day": 3, "publication": 2, "totalVisits": 82, "uniqueVisits": 11 }, { "day": 3, "publication": 3, "totalVisits": 50, "uniqueVisits": 2 }, { "day": 3, "publication": 4, "totalVisits": 40, "uniqueVisits": 21 }, { "day": 3, "publication": 5, "totalVisits": 8, "uniqueVisits": 7 }, { "day": 3, "publication": 6, "totalVisits": 10, "uniqueVisits": 4 }, { "day": 3, "publication": 7, "totalVisits": 37, "uniqueVisits": 21 }, { "day": 3, "publication": 8, "totalVisits": 51, "uniqueVisits": 37 }, { "day": 3, "publication": 9, "totalVisits": 45, "uniqueVisits": 19 }, { "day": 4, "publication": 0, "totalVisits": 86, "uniqueVisits": 54 }, { "day": 4, "publication": 1, "totalVisits": 96, "uniqueVisits": 39 }, { "day": 4, "publication": 2, "totalVisits": 39, "uniqueVisits": 35 }, { "day": 4, "publication": 3, "totalVisits": 98, "uniqueVisits": 38 }, { "day": 4, "publication": 4, "totalVisits": 59, "uniqueVisits": 17 }, { "day": 4, "publication": 5, "totalVisits": 16, "uniqueVisits": 14 }, { "day": 4, "publication": 6, "totalVisits": 75, "uniqueVisits": 4 }, { "day": 4, "publication": 7, "totalVisits": 44, "uniqueVisits": 6 }, { "day": 4, "publication": 8, "totalVisits": 70, "uniqueVisits": 7 }, { "day": 4, "publication": 9, "totalVisits": 68, "uniqueVisits": 51 }, { "day": 5, "publication": 0, "totalVisits": 93, "uniqueVisits": 62 }, { "day": 5, "publication": 1, "totalVisits": 53, "uniqueVisits": 33 }, { "day": 5, "publication": 2, "totalVisits": 75, "uniqueVisits": 32 }, { "day": 5, "publication": 3, "totalVisits": 50, "uniqueVisits": 49 }, { "day": 5, "publication": 4, "totalVisits": 80, "uniqueVisits": 29 }, { "day": 5, "publication": 5, "totalVisits": 20, "uniqueVisits": 7 }, { "day": 5, "publication": 6, "totalVisits": 69, "uniqueVisits": 46 }, { "day": 5, "publication": 7, "totalVisits": 19, "uniqueVisits": 15 }, { "day": 5, "publication": 8, "totalVisits": 36, "uniqueVisits": 35 }, { "day": 5, "publication": 9, "totalVisits": 82, "uniqueVisits": 51 }, { "day": 6, "publication": 0, "totalVisits": 10, "uniqueVisits": 3 }, { "day": 6, "publication": 1, "totalVisits": 92, "uniqueVisits": 13 }, { "day": 6, "publication": 2, "totalVisits": 14, "uniqueVisits": 5 }, { "day": 6, "publication": 3, "totalVisits": 59, "uniqueVisits": 5 }, { "day": 6, "publication": 4, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 6, "publication": 5, "totalVisits": 56, "uniqueVisits": 20 }, { "day": 6, "publication": 6, "totalVisits": 35, "uniqueVisits": 8 }, { "day": 6, "publication": 7, "totalVisits": 9, "uniqueVisits": 3 }, { "day": 6, "publication": 8, "totalVisits": 27, "uniqueVisits": 6 }, { "day": 6, "publication": 9, "totalVisits": 31, "uniqueVisits": 18 }, { "day": 7, "publication": 0, "totalVisits": 2, "uniqueVisits": 0 }, { "day": 7, "publication": 1, "totalVisits": 26, "uniqueVisits": 16 }, { "day": 7, "publication": 2, "totalVisits": 93, "uniqueVisits": 72 }, { "day": 7, "publication": 3, "totalVisits": 85, "uniqueVisits": 3 }, { "day": 7, "publication": 4, "totalVisits": 54, "uniqueVisits": 22 }, { "day": 7, "publication": 5, "totalVisits": 34, "uniqueVisits": 21 }, { "day": 7, "publication": 6, "totalVisits": 37, "uniqueVisits": 14 }, { "day": 7, "publication": 7, "totalVisits": 2, "uniqueVisits": 2 }, { "day": 7, "publication": 8, "totalVisits": 9, "uniqueVisits": 9 }, { "day": 7, "publication": 9, "totalVisits": 84, "uniqueVisits": 64 }] };
-var verticalBarchartData = { "dimensions": { "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "publication": 0, "totalVisits": 64, "uniqueVisits": 53 }, { "publication": 1, "totalVisits": 2, "uniqueVisits": 2 }, { "publication": 2, "totalVisits": 76, "uniqueVisits": 1 }, { "publication": 3, "totalVisits": 58, "uniqueVisits": 55 }, { "publication": 4, "totalVisits": 5, "uniqueVisits": 3 }, { "publication": 5, "totalVisits": 41, "uniqueVisits": 15 }, { "publication": 6, "totalVisits": 9, "uniqueVisits": 4 }, { "publication": 7, "totalVisits": 27, "uniqueVisits": 26 }, { "publication": 8, "totalVisits": 36, "uniqueVisits": 13 }, { "publication": 9, "totalVisits": 68, "uniqueVisits": 42 }] };
-
 var Dashboard = function Dashboard(_ref) {
 	var data = _ref.data;
 	var totalVisits = data.totalVisits,
@@ -23298,7 +23296,8 @@ var Dashboard = function Dashboard(_ref) {
 	    todayVisits = data.todayVisits,
 	    todayUniqueVisits = data.todayUniqueVisits,
 	    streamData = data.streamData,
-	    topPublications = data.topPublications;
+	    topPublications = data.topPublications,
+	    scatterData = data.scatterData;
 
 	return _react2.default.createElement(
 		'div',
@@ -23313,7 +23312,7 @@ var Dashboard = function Dashboard(_ref) {
 		),
 		_react2.default.createElement(_panel2.default, { title: 'Publications by time', id: 'streamgraph', chart: 'streamgraph', className: 'col3', data: streamData, options: { dimensionKey: 'days', seriesKey: 'publications', propName: 'totalVisits' } }),
 		_react2.default.createElement(_panel2.default, { title: 'Top publications', id: 'vbarchart', chart: 'verticalBarchart', className: 'row2', data: topPublications, options: { dimensionKey: 'publications', propName: 'totalVisits' } }),
-		_react2.default.createElement(_panel2.default, { id: 'hbarchart' }),
+		_react2.default.createElement(_panel2.default, { title: 'Visits vs. articles', id: 'scatterchart', chart: 'scatterchart', data: scatterData, options: { dimensionKey: 'publications', verticalAxis: 'articles', horizontalAxis: 'visits' } }),
 		_react2.default.createElement(_panel2.default, { id: 'piechart' }),
 		_react2.default.createElement(_panel2.default, { title: 'Publications by time', id: 'radialchart', chart: 'radialchart', data: streamData, options: { dimensionKey: 'days', seriesKey: 'publications', propName: 'totalVisits' } })
 	);
@@ -23706,12 +23705,17 @@ var _verticalBarchart = __webpack_require__(528);
 
 var _verticalBarchart2 = _interopRequireDefault(_verticalBarchart);
 
+var _scatterchart = __webpack_require__(530);
+
+var _scatterchart2 = _interopRequireDefault(_scatterchart);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
 	streamgraph: _streamgraph2.default,
 	verticalBarchart: _verticalBarchart2.default,
-	radialchart: _radialchart2.default
+	radialchart: _radialchart2.default,
+	scatterchart: _scatterchart2.default
 };
 
 /***/ }),
@@ -23766,7 +23770,6 @@ exports.default = function (div, _ref, _ref2) {
     var svg = (0, _utils.selectOrAppend)(d3.select(div), 'svg');
 
     // Presentation
-    var groupPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse();
 
     var _svg$node = svg.node(),
         clientWidth = _svg$node.clientWidth,
@@ -23831,10 +23834,12 @@ exports.default = function (div, _ref, _ref2) {
     var streams = (0, _utils.selectOrAppend)(streamGraph, 'g.chart').selectAll('path.segment').data(series.members);
 
     streams.exit().remove();
-    streams.enter().append('path').classed('segment', true).classed('autostyle', true).merge(streams).style('fill', function (group) {
-        return groupPalette[group];
+    streams.enter().append('path').attr('class', function (d) {
+        return 'segment autostyle ' + seriesKey + '-' + d;
+    }).merge(streams).style('fill', function (group) {
+        return _utils.publicationPalette[group];
     }).style('stroke', function (group) {
-        return groupPalette[group];
+        return _utils.publicationPalette[group];
     }).attr('d', function (_, index) {
         return area(stack[index]);
     }).each(function (group) {
@@ -52789,7 +52794,7 @@ module.exports = _curry3(function zipWith(fn, a, b) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.addTooltip = undefined;
+exports.publicationPalette = exports.addTooltip = undefined;
 exports.selectOrAppend = selectOrAppend;
 
 var _d = __webpack_require__(206);
@@ -52831,6 +52836,8 @@ var addTooltip = exports.addTooltip = (0, _ramda.curry)(function (value, target)
     });
 });
 
+var publicationPalette = exports.publicationPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'];
+
 /***/ }),
 /* 526 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -52871,7 +52878,7 @@ exports = module.exports = __webpack_require__(21)(undefined);
 
 
 // module
-exports.push([module.i, "svg {\n    height: 250px;\n    width: 100%;\n    background: white;\n    padding: 5px;\n    box-shadow: 0 0 10px #BBB;\n}\n\n.col2 svg {\n    height: 100%;\n}\n\nsvg path:not(.autostyle), svg line:not(.autostyle) {\n    stroke: #444;\n}\nsvg text:not(.autostyle) {\n    fill: #444;\n}\n\nsvg .distal-axis text {\n    text-anchor: middle;\n}\nsvg .distal-axis line,\nsvg .distal-axis .domain,\nsvg .y-axis .domain {\n    visibility: hidden;\n}\nsvg .grid {\n    stroke-dasharray: 4;\n    stroke: #CCC;\n    fill: none;\n}\nsvg .only-labels .domain,\nsvg .only-labels line {\n    visibility: hidden;\n}\n\nsvg .chart .segment:not(.autostyle) {\n    fill: #26A;\n}\nsvg .chart .segment:not(.autostyle) {\n    stroke: none;\n    /*transition: opacity 0.444s;*/\n}\nsvg .chart:hover .segment {\n    opacity: 0.3;\n}\nsvg .chart .segment:hover {\n    opacity: 1;\n}\n\n.tooltip {\n    background: #DDD;\n    padding: 4px;\n    position: absolute;\n}\n", ""]);
+exports.push([module.i, "svg {\n    height: 250px;\n    width: 100%;\n    background: white;\n    padding: 5px;\n    box-shadow: 0 0 10px #BBB;\n}\n\n.col2 svg {\n    height: 100%;\n}\n\nsvg path:not(.autostyle), svg line:not(.autostyle) {\n    stroke: #444;\n}\nsvg text:not(.autostyle) {\n    fill: #444;\n}\n\nsvg .distal-axis text {\n    text-anchor: middle;\n}\nsvg .distal-axis line,\nsvg .distal-axis .domain,\nsvg .y-axis .domain {\n    visibility: hidden;\n}\nsvg .grid {\n    stroke-dasharray: 4;\n    stroke: #CCC;\n    fill: none;\n}\nsvg .only-labels .domain,\nsvg .only-labels line {\n    visibility: hidden;\n}\n\nsvg .chart .segment:not(.autostyle) {\n    fill: #26A;\n}\nsvg .chart .segment:not(.autostyle) {\n    stroke: none;\n    /*transition: opacity 0.444s;*/\n}\nsvg .chart:hover .segment {\n    opacity: 0.3;\n}\nsvg .chart .segment:hover {\n    opacity: 1;\n}\n\nsvg .publications-0 {\n    fill: #42f495;\n}\nsvg .publications-1 {\n    fill: #42f495;\n}\nsvg .publications-2 {\n    fill: #42f495;\n}\nsvg .publications-3 {\n    fill: #42f495;\n}\nsvg .publications-4 {\n    fill: #42f495;\n}\nsvg .publications-5 {\n    fill: #42f495;\n}\nsvg .publications-6 {\n    fill: #42f495;\n}\nsvg .publications-7 {\n    fill: #42f495;\n}\nsvg .publications-8 {\n    fill: #42f495;\n}\nsvg .publications-9 {\n    fill: #42f495;\n}\nsvg .publications-10 {\n    fill: #42f495;\n}\nsvg .publications-11 {\n    fill: #42f495;\n}\nsvg .publications-12 {\n    fill: #42f495;\n}\nsvg .publications-13 {\n    fill: #42f495;\n}\nsvg .publications-14 {\n    fill: #42f495;\n}\nsvg .publications-15 {\n    fill: #42f495;\n}\n\n.tooltip {\n    background: #DDD;\n    padding: 4px;\n    position: absolute;\n}", ""]);
 
 // exports
 
@@ -52913,7 +52920,6 @@ exports.default = function (div, _ref, _ref2) {
     var svg = (0, _utils.selectOrAppend)(d3.select(div), 'svg');
 
     // Presentation
-    var publicationPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse();
     var barHeight = 20;
     var barThickness = 15;
 
@@ -52949,7 +52955,11 @@ exports.default = function (div, _ref, _ref2) {
     var bars = (0, _utils.selectOrAppend)(verticalBarchart, 'g.chart').selectAll('rect.segment').data(sortedDimensions);
 
     bars.exit().remove();
-    bars.enter().append('rect').classed('segment', true).merge(bars).attr('y', function (_, index) {
+    bars.enter().append('rect').attr('class', function (d) {
+        return 'segment autostyle ' + dimensionKey + '-' + d;
+    }).style('fill', function (group) {
+        return _utils.publicationPalette[group];
+    }).merge(bars).attr('y', function (_, index) {
         return y(index);
     }).attr('width', function (d) {
         return x(indexedTuples[d][propName]);
@@ -52998,7 +53008,6 @@ exports.default = function (div, _ref, _ref2) {
     var svg = (0, _utils.selectOrAppend)(d3.select(div), 'svg');
 
     // Presentation
-    var groupPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse();
 
     var _svg$node = svg.node(),
         clientWidth = _svg$node.clientWidth,
@@ -53036,10 +53045,12 @@ exports.default = function (div, _ref, _ref2) {
     var radialTrends = (0, _utils.selectOrAppend)(radialchart, 'g.chart').selectAll('path.segment').data(series.members);
 
     radialTrends.exit().remove();
-    radialTrends.enter().append('path').classed('segment', true).classed('autostyle', true).merge(radialTrends).style('fill', function (group) {
-        return groupPalette[group];
+    radialTrends.enter().append('path').attr('class', function (d) {
+        return 'segment autostyle ' + seriesKey + '-' + d;
+    }).merge(radialTrends).style('fill', function (group) {
+        return _utils.publicationPalette[group];
     }).style('fill-opacity', 0.05).style('stroke-width', 2).style('stroke', function (group) {
-        return groupPalette[group];
+        return _utils.publicationPalette[group];
     }).attr('d', function (serie) {
         return radialLine([].concat(_toConsumableArray(indexedTuples[serie]), [indexedTuples[serie][0]]));
     }).each(function (group) {
@@ -53064,6 +53075,110 @@ exports.default = function (div, _ref, _ref2) {
         var angle = circular(index) * 180 / Math.PI;
         (0, _utils.selectOrAppend)(d3.select(this), 'text').text(tick).attr('transform', 'rotate(' + angle + '), translate(0, ' + -chartRadius + ')');
     });
+};
+
+/***/ }),
+/* 530 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _d = __webpack_require__(206);
+
+var d3 = _interopRequireWildcard(_d);
+
+var _ramda = __webpack_require__(326);
+
+var _utils = __webpack_require__(525);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+exports.default = function (div, _ref, _ref2) {
+    var dimensions = _ref.dimensions,
+        tuples = _ref.tuples;
+    var dimensionKey = _ref2.dimensionKey,
+        verticalAxis = _ref2.verticalAxis,
+        horizontalAxis = _ref2.horizontalAxis;
+
+    // Data
+    var dimension = dimensions[dimensionKey];
+    var indexedTuples = (0, _ramda.indexBy)((0, _ramda.prop)(dimension.id), tuples);
+
+    // SVG Node
+    var svg = (0, _utils.selectOrAppend)(d3.select(div), 'svg');
+
+    // Presentation
+
+    var _svg$node = svg.node(),
+        clientWidth = _svg$node.clientWidth,
+        clientHeight = _svg$node.clientHeight;
+
+    var margin = {
+        top: 20,
+        right: 28,
+        bottom: 28,
+        left: 20
+    };
+    var chartWidth = clientWidth - margin.left - margin.right;
+    var chartHeight = clientHeight - margin.top - margin.bottom;
+
+    // Scale
+    var xDomain = d3.extent(tuples, (0, _ramda.prop)(horizontalAxis));
+    var yDomain = d3.extent(tuples, (0, _ramda.prop)(verticalAxis));
+    var x = d3.scaleLinear().domain(xDomain).range([0, chartWidth]);
+    var y = d3.scaleLinear().domain(yDomain).range([chartHeight, 0]);
+
+    // Nodes
+    var scatterchart = (0, _utils.selectOrAppend)(svg, 'g').attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
+
+    var chart = (0, _utils.selectOrAppend)(scatterchart, 'g.chart');
+
+    function draw() {
+        var xScale = d3.event ? d3.event.transform.rescaleX(x) : x;
+        var yScale = d3.event ? d3.event.transform.rescaleY(y) : y;
+        // Axes
+        var xAxisTop = d3.axisTop(xScale);
+        var xAxisBottom = d3.axisBottom(xScale);
+        var yAxisLeft = d3.axisLeft(yScale);
+        var yAxisRight = d3.axisRight(yScale);
+
+        (0, _utils.selectOrAppend)(scatterchart, 'g.y-axis-grid').call(yAxisLeft).selectAll('line').classed('grid', true).classed('autostyle', true).attr('x2', chartWidth);
+        (0, _utils.selectOrAppend)(scatterchart, 'g.y-axis-left').call(yAxisLeft);
+        (0, _utils.selectOrAppend)(scatterchart, 'g.y-axis-right').call(yAxisRight).attr('transform', 'translate(' + chartWidth + ')');
+        (0, _utils.selectOrAppend)(scatterchart, 'g.x-axis-grid').call(xAxisTop).selectAll('line').classed('grid', true).classed('autostyle', true).attr('y2', chartHeight);
+        (0, _utils.selectOrAppend)(scatterchart, 'g.x-axis-top').call(xAxisTop);
+        (0, _utils.selectOrAppend)(scatterchart, 'g.x-axis-bottom').call(xAxisBottom).attr('transform', 'translate(0, ' + chartHeight + ')');
+
+        // Position dots
+        chart.selectAll('.segment').each(function (d) {
+            var xPos = xScale(indexedTuples[d][horizontalAxis]);
+            var yPos = yScale(indexedTuples[d][verticalAxis]);
+            d3.select(this).attr('cx', xPos).attr('cy', yPos).style('visibility', xPos < 0 || xPos > chartWidth || yPos < 0 || yPos > chartHeight ? 'hidden' : 'visible');
+        });
+    }
+
+    // Zoom
+    var zoom = d3.zoom().scaleExtent([1, 10]).translateExtent([[0, 0], [clientWidth, clientHeight]]).on('zoom', draw);
+
+    svg.call(zoom);
+
+    var dots = chart.selectAll('circle.segment').data(dimension.members);
+
+    dots.exit().remove();
+    dots.enter().append('circle').attr('class', function (d) {
+        return 'segment ' + dimensionKey + '-' + d;
+    }).style('fill', function (group) {
+        return _utils.publicationPalette[group];
+    }).attr('r', 3).merge(dots).each(function (d) {
+        (0, _utils.addTooltip)(d + ': <br />' + indexedTuples[d][verticalAxis].toFixed(1) + ', ' + indexedTuples[d][horizontalAxis].toFixed(1), d3.select(this));
+    });
+
+    draw();
 };
 
 /***/ })

@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
 import { groupBy, prop } from 'ramda'
-import { selectOrAppend, addTooltip } from './utils'
+import { selectOrAppend, addTooltip, publicationPalette } from './utils'
 
 export default (div, { dimensions, tuples }, { dimensionKey, seriesKey, propName }) => {
     // Data
@@ -13,7 +13,6 @@ export default (div, { dimensions, tuples }, { dimensionKey, seriesKey, propName
     const svg = selectOrAppend(d3.select(div), 'svg')
 
     // Presentation
-    const groupPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse()
     const { clientWidth, clientHeight } = svg.node()
     const margin = {
         top: 10,
@@ -54,13 +53,12 @@ export default (div, { dimensions, tuples }, { dimensionKey, seriesKey, propName
     radialTrends.exit().remove()
     radialTrends.enter()
         .append('path')
-        .classed('segment', true)
-        .classed('autostyle', true)
+        .attr('class', d => `segment autostyle ${seriesKey}-${d}`)
         .merge(radialTrends)
-        .style('fill', group => groupPalette[group])
+        .style('fill', group => publicationPalette[group])
         .style('fill-opacity', 0.05)
         .style('stroke-width', 2)
-        .style('stroke', group => groupPalette[group])
+        .style('stroke', group => publicationPalette[group])
         .attr('d', serie => radialLine([...indexedTuples[serie], indexedTuples[serie][0]]))
         .each(function(group) {
             addTooltip(() => {

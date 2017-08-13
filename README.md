@@ -4,3 +4,6 @@
 
 `$ npm install`
 
+## Run
+
+`$ webpack`

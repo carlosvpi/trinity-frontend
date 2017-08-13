@@ -49,6 +49,55 @@ svg .chart .segment:hover {
     opacity: 1;
 }
 
+svg .publications-0 {
+    fill: #42f495;
+}
+svg .publications-1 {
+    fill: #42f495;
+}
+svg .publications-2 {
+    fill: #42f495;
+}
+svg .publications-3 {
+    fill: #42f495;
+}
+svg .publications-4 {
+    fill: #42f495;
+}
+svg .publications-5 {
+    fill: #42f495;
+}
+svg .publications-6 {
+    fill: #42f495;
+}
+svg .publications-7 {
+    fill: #42f495;
+}
+svg .publications-8 {
+    fill: #42f495;
+}
+svg .publications-9 {
+    fill: #42f495;
+}
+svg .publications-10 {
+    fill: #42f495;
+}
+svg .publications-11 {
+    fill: #42f495;
+}
+svg .publications-12 {
+    fill: #42f495;
+}
+svg .publications-13 {
+    fill: #42f495;
+}
+svg .publications-14 {
+    fill: #42f495;
+}
+svg .publications-15 {
+    fill: #42f495;
+}
+
 .tooltip {
     background: #DDD;
     padding: 4px;

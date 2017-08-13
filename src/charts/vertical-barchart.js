@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
 import { indexBy, prop } from 'ramda'
-import { selectOrAppend, addTooltip } from './utils'
+import { selectOrAppend, addTooltip, publicationPalette } from './utils'
 
 export default (div, { dimensions, tuples }, { dimensionKey, propName }) => {
     // Data
@@ -11,7 +11,6 @@ export default (div, { dimensions, tuples }, { dimensionKey, propName }) => {
     const svg = selectOrAppend(d3.select(div), 'svg')
 
     // Presentation
-    const publicationPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse()
     const barHeight = 20;
     const barThickness = 15;
     const { clientWidth } = svg.node()
@@ -58,7 +57,8 @@ export default (div, { dimensions, tuples }, { dimensionKey, propName }) => {
     bars.exit().remove()
     bars.enter()
         .append('rect')
-        .classed('segment', true)
+        .attr('class', d => `segment autostyle ${dimensionKey}-${d}`)
+        .style('fill', group => publicationPalette[group])
         .merge(bars)
         .attr('y', (_, index) => y(index))
         .attr('width', d => x(indexedTuples[d][propName]))

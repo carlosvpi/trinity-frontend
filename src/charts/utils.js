@@ -33,3 +33,5 @@ export const addTooltip = curry((value, target) => {
         })
         .on('mouseout', () => tooltip.remove())
 })
+
+export const publicationPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584']
