@@ -22853,6 +22853,8 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(16);
@@ -22880,6 +22882,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+// import mockServer from '../utils/mock-server.js'
+
 
 __webpack_require__(200);
 
@@ -22891,26 +22895,60 @@ var Main = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
-		_this.state = {};
-		d3.json('https://jsonplaceholder.typicode.com/posts/1', function (err, data) {
-			if (err) {
-				console.log(err);
-			} else {
-				_this.setState({ data: data });
+		_this.state = {
+			connecting: 0,
+			data: {
+				totalVisits: 14971,
+				uniqueVisits: 12581,
+				todayVisits: 317,
+				todayUniqueVisits: 291,
+				streamData: { "dimensions": { "days": { "id": "day", "members": [1, 2, 3, 4, 5, 6, 7] }, "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "day": 1, "publication": 0, "totalVisits": 26, "uniqueVisits": 21 }, { "day": 1, "publication": 1, "totalVisits": 18, "uniqueVisits": 4 }, { "day": 1, "publication": 2, "totalVisits": 22, "uniqueVisits": 3 }, { "day": 1, "publication": 3, "totalVisits": 55, "uniqueVisits": 24 }, { "day": 1, "publication": 4, "totalVisits": 91, "uniqueVisits": 38 }, { "day": 1, "publication": 5, "totalVisits": 26, "uniqueVisits": 13 }, { "day": 1, "publication": 6, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 1, "publication": 7, "totalVisits": 14, "uniqueVisits": 13 }, { "day": 1, "publication": 8, "totalVisits": 77, "uniqueVisits": 18 }, { "day": 1, "publication": 9, "totalVisits": 30, "uniqueVisits": 19 }, { "day": 2, "publication": 0, "totalVisits": 52, "uniqueVisits": 31 }, { "day": 2, "publication": 1, "totalVisits": 5, "uniqueVisits": 1 }, { "day": 2, "publication": 2, "totalVisits": 75, "uniqueVisits": 33 }, { "day": 2, "publication": 3, "totalVisits": 33, "uniqueVisits": 21 }, { "day": 2, "publication": 4, "totalVisits": 60, "uniqueVisits": 32 }, { "day": 2, "publication": 5, "totalVisits": 1, "uniqueVisits": 1 }, { "day": 2, "publication": 6, "totalVisits": 91, "uniqueVisits": 8 }, { "day": 2, "publication": 7, "totalVisits": 69, "uniqueVisits": 53 }, { "day": 2, "publication": 8, "totalVisits": 91, "uniqueVisits": 66 }, { "day": 2, "publication": 9, "totalVisits": 10, "uniqueVisits": 6 }, { "day": 3, "publication": 0, "totalVisits": 9, "uniqueVisits": 5 }, { "day": 3, "publication": 1, "totalVisits": 57, "uniqueVisits": 16 }, { "day": 3, "publication": 2, "totalVisits": 82, "uniqueVisits": 11 }, { "day": 3, "publication": 3, "totalVisits": 50, "uniqueVisits": 2 }, { "day": 3, "publication": 4, "totalVisits": 40, "uniqueVisits": 21 }, { "day": 3, "publication": 5, "totalVisits": 8, "uniqueVisits": 7 }, { "day": 3, "publication": 6, "totalVisits": 10, "uniqueVisits": 4 }, { "day": 3, "publication": 7, "totalVisits": 37, "uniqueVisits": 21 }, { "day": 3, "publication": 8, "totalVisits": 51, "uniqueVisits": 37 }, { "day": 3, "publication": 9, "totalVisits": 45, "uniqueVisits": 19 }, { "day": 4, "publication": 0, "totalVisits": 86, "uniqueVisits": 54 }, { "day": 4, "publication": 1, "totalVisits": 96, "uniqueVisits": 39 }, { "day": 4, "publication": 2, "totalVisits": 39, "uniqueVisits": 35 }, { "day": 4, "publication": 3, "totalVisits": 98, "uniqueVisits": 38 }, { "day": 4, "publication": 4, "totalVisits": 59, "uniqueVisits": 17 }, { "day": 4, "publication": 5, "totalVisits": 16, "uniqueVisits": 14 }, { "day": 4, "publication": 6, "totalVisits": 75, "uniqueVisits": 4 }, { "day": 4, "publication": 7, "totalVisits": 44, "uniqueVisits": 6 }, { "day": 4, "publication": 8, "totalVisits": 70, "uniqueVisits": 7 }, { "day": 4, "publication": 9, "totalVisits": 68, "uniqueVisits": 51 }, { "day": 5, "publication": 0, "totalVisits": 93, "uniqueVisits": 62 }, { "day": 5, "publication": 1, "totalVisits": 53, "uniqueVisits": 33 }, { "day": 5, "publication": 2, "totalVisits": 75, "uniqueVisits": 32 }, { "day": 5, "publication": 3, "totalVisits": 50, "uniqueVisits": 49 }, { "day": 5, "publication": 4, "totalVisits": 80, "uniqueVisits": 29 }, { "day": 5, "publication": 5, "totalVisits": 20, "uniqueVisits": 7 }, { "day": 5, "publication": 6, "totalVisits": 69, "uniqueVisits": 46 }, { "day": 5, "publication": 7, "totalVisits": 19, "uniqueVisits": 15 }, { "day": 5, "publication": 8, "totalVisits": 36, "uniqueVisits": 35 }, { "day": 5, "publication": 9, "totalVisits": 82, "uniqueVisits": 51 }, { "day": 6, "publication": 0, "totalVisits": 10, "uniqueVisits": 3 }, { "day": 6, "publication": 1, "totalVisits": 92, "uniqueVisits": 13 }, { "day": 6, "publication": 2, "totalVisits": 14, "uniqueVisits": 5 }, { "day": 6, "publication": 3, "totalVisits": 59, "uniqueVisits": 5 }, { "day": 6, "publication": 4, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 6, "publication": 5, "totalVisits": 56, "uniqueVisits": 20 }, { "day": 6, "publication": 6, "totalVisits": 35, "uniqueVisits": 8 }, { "day": 6, "publication": 7, "totalVisits": 9, "uniqueVisits": 3 }, { "day": 6, "publication": 8, "totalVisits": 27, "uniqueVisits": 6 }, { "day": 6, "publication": 9, "totalVisits": 31, "uniqueVisits": 18 }, { "day": 7, "publication": 0, "totalVisits": 2, "uniqueVisits": 0 }, { "day": 7, "publication": 1, "totalVisits": 26, "uniqueVisits": 16 }, { "day": 7, "publication": 2, "totalVisits": 93, "uniqueVisits": 72 }, { "day": 7, "publication": 3, "totalVisits": 85, "uniqueVisits": 3 }, { "day": 7, "publication": 4, "totalVisits": 54, "uniqueVisits": 22 }, { "day": 7, "publication": 5, "totalVisits": 34, "uniqueVisits": 21 }, { "day": 7, "publication": 6, "totalVisits": 37, "uniqueVisits": 14 }, { "day": 7, "publication": 7, "totalVisits": 2, "uniqueVisits": 2 }, { "day": 7, "publication": 8, "totalVisits": 9, "uniqueVisits": 9 }, { "day": 7, "publication": 9, "totalVisits": 84, "uniqueVisits": 64 }] },
+				topPublications: { "dimensions": { "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "publication": 0, "totalVisits": 64, "uniqueVisits": 53 }, { "publication": 1, "totalVisits": 2, "uniqueVisits": 2 }, { "publication": 2, "totalVisits": 76, "uniqueVisits": 1 }, { "publication": 3, "totalVisits": 58, "uniqueVisits": 55 }, { "publication": 4, "totalVisits": 5, "uniqueVisits": 3 }, { "publication": 5, "totalVisits": 41, "uniqueVisits": 15 }, { "publication": 6, "totalVisits": 9, "uniqueVisits": 4 }, { "publication": 7, "totalVisits": 27, "uniqueVisits": 26 }, { "publication": 8, "totalVisits": 36, "uniqueVisits": 13 }, { "publication": 9, "totalVisits": 68, "uniqueVisits": 42 }] }
 			}
-		});
+		};
+		_this.state.data.radialData = _this.state.data.streamData;
+		_this.loadData('nothing', 'nothing', 'nothing', ['totalVisits']);
+		_this.loadData('uniq', 'nothing', 'nothing', ['uniqueVisits']);
+		// this.loadData('nothing', 'day', 'nothing', ['todayVisits'])
+		// this.loadData('uniq', 'day', 'nothing', ['todayUniqueVisits'])
+		_this.loadData('nothing', 'day', 'publicationId', ['streamData', 'radialData']);
+		_this.loadData('nothing', 'nothing', 'publicationId', ['topPublications']);
 		return _this;
 	}
 
 	_createClass(Main, [{
+		key: 'loadData',
+		value: function loadData(uniq, period, group, keys) {
+			var _this2 = this;
+
+			this.state.connecting++;
+			this.setState({ connecting: this.state.connecting });
+			d3.json('http://localhost:4567/get?uniq=' + uniq + '&period=' + period + '&group=' + group, function (err, data) {
+				if (err) {
+					console.err(err);
+					// Mock server
+					// data = mockServer(uniq, period, group)
+				} else {
+					keys.forEach(function (key) {
+						return _this2.state.data[key] = data;
+					});
+					_this2.setState(_extends({}, _this2.state, {
+						connecting: _this2.state.connecting--
+					}));
+				}
+			});
+		}
+	}, {
 		key: 'render',
 		value: function render() {
-			var data = this.state.data;
+			var _state = this.state,
+			    data = _state.data,
+			    connecting = _state.connecting;
 
 			return _react2.default.createElement(
 				'div',
 				{ id: 'main' },
-				_react2.default.createElement(_sidebar2.default, { groupBy: 'Nothing', aggregateBy: 'Day', uniqueness: 'Total' }),
+				_react2.default.createElement(_sidebar2.default, { groupBy: 'Nothing', aggregateBy: 'Day', uniqueness: 'Total', connecting: connecting }),
 				data ? _react2.default.createElement(_dashboard2.default, { data: data }) : _react2.default.createElement(
 					'h2',
 					null,
@@ -22947,10 +22985,16 @@ __webpack_require__(188);
 var Sidebar = function Sidebar(_ref) {
 	var groupBy = _ref.groupBy,
 	    aggregateBy = _ref.aggregateBy,
-	    uniqueness = _ref.uniqueness;
+	    uniqueness = _ref.uniqueness,
+	    connecting = _ref.connecting;
 	return _react2.default.createElement(
 		'div',
 		{ id: 'sidebar' },
+		connecting > 0 ? _react2.default.createElement(
+			'p',
+			null,
+			'Connecting to the server (showing mock data)'
+		) : '',
 		_react2.default.createElement(
 			'div',
 			{ id: 'group-by' },
@@ -23117,7 +23161,7 @@ exports = module.exports = __webpack_require__(21)(undefined);
 
 
 // module
-exports.push([module.i, "#sidebar {\n\theight: 100%;\n\twidth: 19%;\n\tmargin-right: 1%;\n\tfloat: left;\n\tpadding: 5px;\n\tbackground: #444;\n\tz-index: 1000;\n\tcolor: #EEE;\n\tfont-size: 14px;\n}\n\n#sidebar h2 {\n\tcolor: #FFF;\n\tpadding: 5px 0;\n\tfont-weight: normal;\n}\n\n#sidebar a {\n\tcolor: #DDD;\n\tpadding: 3px;\n}\n#sidebar a:hover,\n#sidebar .selected {\n\tbackground: #666;\n}\n#sidebar a:active {\n\tbackground: #888;\n\tcolor: #FFF;\n}", ""]);
+exports.push([module.i, "#sidebar {\n\theight: 100%;\n\twidth: 19%;\n\tmargin-right: 1%;\n\tfloat: left;\n\tpadding: 5px;\n\tbackground: #444;\n\tz-index: 1000;\n\tcolor: #EEE;\n\tfont-size: 14px;\n}\n\n#sidebar h2 {\n\tcolor: #FFF;\n\tpadding: 5px 0;\n\tfont-weight: normal;\n}\n\n#sidebar a, \n#sidebar p {\n\tcolor: #DDD;\n\tpadding: 3px;\n}\n#sidebar a:hover,\n#sidebar .selected {\n\tbackground: #666;\n}\n#sidebar a:active {\n\tbackground: #888;\n\tcolor: #FFF;\n}", ""]);
 
 // exports
 
@@ -23247,23 +23291,31 @@ __webpack_require__(198);
 var streamgraphData = { "dimensions": { "days": { "id": "day", "members": [1, 2, 3, 4, 5, 6, 7] }, "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "day": 1, "publication": 0, "totalVisits": 26, "uniqueVisits": 21 }, { "day": 1, "publication": 1, "totalVisits": 18, "uniqueVisits": 4 }, { "day": 1, "publication": 2, "totalVisits": 22, "uniqueVisits": 3 }, { "day": 1, "publication": 3, "totalVisits": 55, "uniqueVisits": 24 }, { "day": 1, "publication": 4, "totalVisits": 91, "uniqueVisits": 38 }, { "day": 1, "publication": 5, "totalVisits": 26, "uniqueVisits": 13 }, { "day": 1, "publication": 6, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 1, "publication": 7, "totalVisits": 14, "uniqueVisits": 13 }, { "day": 1, "publication": 8, "totalVisits": 77, "uniqueVisits": 18 }, { "day": 1, "publication": 9, "totalVisits": 30, "uniqueVisits": 19 }, { "day": 2, "publication": 0, "totalVisits": 52, "uniqueVisits": 31 }, { "day": 2, "publication": 1, "totalVisits": 5, "uniqueVisits": 1 }, { "day": 2, "publication": 2, "totalVisits": 75, "uniqueVisits": 33 }, { "day": 2, "publication": 3, "totalVisits": 33, "uniqueVisits": 21 }, { "day": 2, "publication": 4, "totalVisits": 60, "uniqueVisits": 32 }, { "day": 2, "publication": 5, "totalVisits": 1, "uniqueVisits": 1 }, { "day": 2, "publication": 6, "totalVisits": 91, "uniqueVisits": 8 }, { "day": 2, "publication": 7, "totalVisits": 69, "uniqueVisits": 53 }, { "day": 2, "publication": 8, "totalVisits": 91, "uniqueVisits": 66 }, { "day": 2, "publication": 9, "totalVisits": 10, "uniqueVisits": 6 }, { "day": 3, "publication": 0, "totalVisits": 9, "uniqueVisits": 5 }, { "day": 3, "publication": 1, "totalVisits": 57, "uniqueVisits": 16 }, { "day": 3, "publication": 2, "totalVisits": 82, "uniqueVisits": 11 }, { "day": 3, "publication": 3, "totalVisits": 50, "uniqueVisits": 2 }, { "day": 3, "publication": 4, "totalVisits": 40, "uniqueVisits": 21 }, { "day": 3, "publication": 5, "totalVisits": 8, "uniqueVisits": 7 }, { "day": 3, "publication": 6, "totalVisits": 10, "uniqueVisits": 4 }, { "day": 3, "publication": 7, "totalVisits": 37, "uniqueVisits": 21 }, { "day": 3, "publication": 8, "totalVisits": 51, "uniqueVisits": 37 }, { "day": 3, "publication": 9, "totalVisits": 45, "uniqueVisits": 19 }, { "day": 4, "publication": 0, "totalVisits": 86, "uniqueVisits": 54 }, { "day": 4, "publication": 1, "totalVisits": 96, "uniqueVisits": 39 }, { "day": 4, "publication": 2, "totalVisits": 39, "uniqueVisits": 35 }, { "day": 4, "publication": 3, "totalVisits": 98, "uniqueVisits": 38 }, { "day": 4, "publication": 4, "totalVisits": 59, "uniqueVisits": 17 }, { "day": 4, "publication": 5, "totalVisits": 16, "uniqueVisits": 14 }, { "day": 4, "publication": 6, "totalVisits": 75, "uniqueVisits": 4 }, { "day": 4, "publication": 7, "totalVisits": 44, "uniqueVisits": 6 }, { "day": 4, "publication": 8, "totalVisits": 70, "uniqueVisits": 7 }, { "day": 4, "publication": 9, "totalVisits": 68, "uniqueVisits": 51 }, { "day": 5, "publication": 0, "totalVisits": 93, "uniqueVisits": 62 }, { "day": 5, "publication": 1, "totalVisits": 53, "uniqueVisits": 33 }, { "day": 5, "publication": 2, "totalVisits": 75, "uniqueVisits": 32 }, { "day": 5, "publication": 3, "totalVisits": 50, "uniqueVisits": 49 }, { "day": 5, "publication": 4, "totalVisits": 80, "uniqueVisits": 29 }, { "day": 5, "publication": 5, "totalVisits": 20, "uniqueVisits": 7 }, { "day": 5, "publication": 6, "totalVisits": 69, "uniqueVisits": 46 }, { "day": 5, "publication": 7, "totalVisits": 19, "uniqueVisits": 15 }, { "day": 5, "publication": 8, "totalVisits": 36, "uniqueVisits": 35 }, { "day": 5, "publication": 9, "totalVisits": 82, "uniqueVisits": 51 }, { "day": 6, "publication": 0, "totalVisits": 10, "uniqueVisits": 3 }, { "day": 6, "publication": 1, "totalVisits": 92, "uniqueVisits": 13 }, { "day": 6, "publication": 2, "totalVisits": 14, "uniqueVisits": 5 }, { "day": 6, "publication": 3, "totalVisits": 59, "uniqueVisits": 5 }, { "day": 6, "publication": 4, "totalVisits": 4, "uniqueVisits": 3 }, { "day": 6, "publication": 5, "totalVisits": 56, "uniqueVisits": 20 }, { "day": 6, "publication": 6, "totalVisits": 35, "uniqueVisits": 8 }, { "day": 6, "publication": 7, "totalVisits": 9, "uniqueVisits": 3 }, { "day": 6, "publication": 8, "totalVisits": 27, "uniqueVisits": 6 }, { "day": 6, "publication": 9, "totalVisits": 31, "uniqueVisits": 18 }, { "day": 7, "publication": 0, "totalVisits": 2, "uniqueVisits": 0 }, { "day": 7, "publication": 1, "totalVisits": 26, "uniqueVisits": 16 }, { "day": 7, "publication": 2, "totalVisits": 93, "uniqueVisits": 72 }, { "day": 7, "publication": 3, "totalVisits": 85, "uniqueVisits": 3 }, { "day": 7, "publication": 4, "totalVisits": 54, "uniqueVisits": 22 }, { "day": 7, "publication": 5, "totalVisits": 34, "uniqueVisits": 21 }, { "day": 7, "publication": 6, "totalVisits": 37, "uniqueVisits": 14 }, { "day": 7, "publication": 7, "totalVisits": 2, "uniqueVisits": 2 }, { "day": 7, "publication": 8, "totalVisits": 9, "uniqueVisits": 9 }, { "day": 7, "publication": 9, "totalVisits": 84, "uniqueVisits": 64 }] };
 var verticalBarchartData = { "dimensions": { "publications": { "id": "publication", "members": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] } }, "tuples": [{ "publication": 0, "totalVisits": 64, "uniqueVisits": 53 }, { "publication": 1, "totalVisits": 2, "uniqueVisits": 2 }, { "publication": 2, "totalVisits": 76, "uniqueVisits": 1 }, { "publication": 3, "totalVisits": 58, "uniqueVisits": 55 }, { "publication": 4, "totalVisits": 5, "uniqueVisits": 3 }, { "publication": 5, "totalVisits": 41, "uniqueVisits": 15 }, { "publication": 6, "totalVisits": 9, "uniqueVisits": 4 }, { "publication": 7, "totalVisits": 27, "uniqueVisits": 26 }, { "publication": 8, "totalVisits": 36, "uniqueVisits": 13 }, { "publication": 9, "totalVisits": 68, "uniqueVisits": 42 }] };
 
-var Dashboard = function Dashboard(data) {
+var Dashboard = function Dashboard(_ref) {
+	var data = _ref.data;
+	var totalVisits = data.totalVisits,
+	    uniqueVisits = data.uniqueVisits,
+	    todayVisits = data.todayVisits,
+	    todayUniqueVisits = data.todayUniqueVisits,
+	    streamData = data.streamData,
+	    topPublications = data.topPublications;
+
 	return _react2.default.createElement(
 		'div',
 		{ id: 'dashboard' },
 		_react2.default.createElement(
 			'div',
 			{ id: 'top-row' },
-			_react2.default.createElement(_valuePanel2.default, { content: 'Total Visits' }),
-			_react2.default.createElement(_valuePanel2.default, { content: 'Todays Visits' }),
-			_react2.default.createElement(_valuePanel2.default, { content: 'Total articles' }),
-			_react2.default.createElement(_valuePanel2.default, { content: 'Todays articles' })
+			_react2.default.createElement(_valuePanel2.default, { title: 'Total Visits', data: totalVisits }),
+			_react2.default.createElement(_valuePanel2.default, { title: 'Today\'s Visits', data: todayVisits }),
+			_react2.default.createElement(_valuePanel2.default, { title: 'Unique Visits', data: uniqueVisits }),
+			_react2.default.createElement(_valuePanel2.default, { title: 'Today\'s Unique Visits', data: todayUniqueVisits })
 		),
-		_react2.default.createElement(_panel2.default, { id: 'streamgraph', chart: 'streamgraph', className: 'col3', data: streamgraphData, options: { dimensionKey: 'days', seriesKey: 'publications', propName: 'totalVisits' } }),
-		_react2.default.createElement(_panel2.default, { id: 'vbarchart', chart: 'verticalBarchart', className: 'row2', data: verticalBarchartData, options: { dimensionKey: 'publications', propName: 'totalVisits' } }),
+		_react2.default.createElement(_panel2.default, { title: 'Publications by time', id: 'streamgraph', chart: 'streamgraph', className: 'col3', data: streamData, options: { dimensionKey: 'days', seriesKey: 'publications', propName: 'totalVisits' } }),
+		_react2.default.createElement(_panel2.default, { title: 'Top publications', id: 'vbarchart', chart: 'verticalBarchart', className: 'row2', data: topPublications, options: { dimensionKey: 'publications', propName: 'totalVisits' } }),
 		_react2.default.createElement(_panel2.default, { id: 'hbarchart' }),
 		_react2.default.createElement(_panel2.default, { id: 'piechart' }),
-		_react2.default.createElement(_panel2.default, { id: 'radialchart' })
+		_react2.default.createElement(_panel2.default, { title: 'Publications by time', id: 'radialchart', chart: 'radialchart', data: streamData, options: { dimensionKey: 'days', seriesKey: 'publications', propName: 'totalVisits' } })
 	);
 };
 
@@ -23289,7 +23341,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 __webpack_require__(193);
 
 var ValuePanel = function ValuePanel(_ref) {
-	var content = _ref.content;
+	var title = _ref.title,
+	    data = _ref.data;
 
 	return _react2.default.createElement(
 		'div',
@@ -23297,22 +23350,12 @@ var ValuePanel = function ValuePanel(_ref) {
 		_react2.default.createElement(
 			'h2',
 			null,
-			content
+			title
 		),
 		_react2.default.createElement(
 			'strong',
-			{ className: 'total-value' },
-			'1000'
-		),
-		_react2.default.createElement(
-			'p',
 			null,
-			'Unique ',
-			_react2.default.createElement(
-				'span',
-				null,
-				'100'
-			)
+			data
 		)
 	);
 };
@@ -23440,9 +23483,18 @@ var Panel = function (_React$Component) {
 			var _props = this.props,
 			    id = _props.id,
 			    chart = _props.chart,
-			    className = _props.className;
+			    className = _props.className,
+			    title = _props.title;
 
-			return _react2.default.createElement('div', { className: 'panel ' + className, id: id });
+			return _react2.default.createElement(
+				'div',
+				{ className: 'panel ' + className, id: id },
+				_react2.default.createElement(
+					'h3',
+					null,
+					title || ''
+				)
+			);
 		}
 	}]);
 
@@ -23491,7 +23543,7 @@ exports = module.exports = __webpack_require__(21)(undefined);
 
 
 // module
-exports.push([module.i, ".panel {\n\tfloat: left;\n\theight: 40%;\n\twidth: 25%;\n\tpadding: 8px;\n\toverflow: scroll;\n}\n\n.panel.col3 {\n\twidth: 75%;\n}\n\n.panel.row2 {\n\theight: 80%;\n\tfloat: right;\n}", ""]);
+exports.push([module.i, ".panel {\n\tfloat: left;\n\theight: 42%;\n\twidth: 25%;\n\tpadding: 8px;\n\toverflow: scroll;\n}\n\n.panel.col3 {\n\twidth: 75%;\n}\n\n.panel.row2 {\n\theight: 80%;\n\tfloat: right;\n}\n\n.panel h3 {\n\tfont-size: 14px;\n\tfont-weight: normal;\n\tpadding-left: 10px;\n\tpadding-bottom: 10px;\n}", ""]);
 
 // exports
 
@@ -23536,7 +23588,7 @@ exports = module.exports = __webpack_require__(21)(undefined);
 
 
 // module
-exports.push([module.i, "#dashboard {\n\theight: 100%;\n\twidth: 80%;\n\tfloat: left;\n}\n\n#top-row {\n\twidth: 100%;\n\theight: 20%;\n}", ""]);
+exports.push([module.i, "#dashboard {\n\theight: 100%;\n\twidth: 80%;\n\tfloat: left;\n}\n\n#top-row {\n\twidth: 100%;\n\theight: 16%;\n}", ""]);
 
 // exports
 
@@ -23646,6 +23698,10 @@ var _streamgraph = __webpack_require__(205);
 
 var _streamgraph2 = _interopRequireDefault(_streamgraph);
 
+var _radialchart = __webpack_require__(529);
+
+var _radialchart2 = _interopRequireDefault(_radialchart);
+
 var _verticalBarchart = __webpack_require__(528);
 
 var _verticalBarchart2 = _interopRequireDefault(_verticalBarchart);
@@ -23654,7 +23710,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
 	streamgraph: _streamgraph2.default,
-	verticalBarchart: _verticalBarchart2.default
+	verticalBarchart: _verticalBarchart2.default,
+	radialchart: _radialchart2.default
 };
 
 /***/ }),
@@ -52814,7 +52871,7 @@ exports = module.exports = __webpack_require__(21)(undefined);
 
 
 // module
-exports.push([module.i, "svg {\n    height: 100%;\n    width: 100%;\n    background: white;\n    padding: 5px;\n    box-shadow: 0 0 10px #BBB;\n}\n\nsvg path:not(.autostyle), svg line:not(.autostyle) {\n    stroke: #444;\n}\nsvg text:not(.autostyle) {\n    fill: #444;\n}\n\nsvg .distal-axis text {\n    text-anchor: middle;\n}\nsvg .distal-axis line,\nsvg .distal-axis .domain,\nsvg .y-axis .domain {\n    visibility: hidden;\n}\nsvg .distal-axis circle,\nsvg .y-axis line {\n    stroke-dasharray: 4;\n    stroke: #CCC;\n    fill: none;\n}\nsvg .only-labels .domain,\nsvg .only-labels line {\n    visibility: hidden;\n}\n\nsvg .chart .segment:not(.autostyle) {\n    fill: #26A;\n}\nsvg .chart .segment:not(.autostyle) {\n    stroke: none;\n    transition: opacity 0.444s;\n}\nsvg .chart:hover .segment {\n    opacity: 0.3;\n}\nsvg .chart .segment:hover {\n    opacity: 1;\n}\n\n.tooltip {\n    background: #DDD;\n    padding: 4px;\n    position: absolute;\n}\n", ""]);
+exports.push([module.i, "svg {\n    height: 250px;\n    width: 100%;\n    background: white;\n    padding: 5px;\n    box-shadow: 0 0 10px #BBB;\n}\n\n.col2 svg {\n    height: 100%;\n}\n\nsvg path:not(.autostyle), svg line:not(.autostyle) {\n    stroke: #444;\n}\nsvg text:not(.autostyle) {\n    fill: #444;\n}\n\nsvg .distal-axis text {\n    text-anchor: middle;\n}\nsvg .distal-axis line,\nsvg .distal-axis .domain,\nsvg .y-axis .domain {\n    visibility: hidden;\n}\nsvg .grid {\n    stroke-dasharray: 4;\n    stroke: #CCC;\n    fill: none;\n}\nsvg .only-labels .domain,\nsvg .only-labels line {\n    visibility: hidden;\n}\n\nsvg .chart .segment:not(.autostyle) {\n    fill: #26A;\n}\nsvg .chart .segment:not(.autostyle) {\n    stroke: none;\n    /*transition: opacity 0.444s;*/\n}\nsvg .chart:hover .segment {\n    opacity: 0.3;\n}\nsvg .chart .segment:hover {\n    opacity: 1;\n}\n\n.tooltip {\n    background: #DDD;\n    padding: 4px;\n    position: absolute;\n}\n", ""]);
 
 // exports
 
@@ -52898,6 +52955,114 @@ exports.default = function (div, _ref, _ref2) {
         return x(indexedTuples[d][propName]);
     }).attr('height', barThickness).each(function (d) {
         (0, _utils.addTooltip)(d + ': ' + indexedTuples[d][propName], d3.select(this));
+    });
+};
+
+/***/ }),
+/* 529 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _d = __webpack_require__(206);
+
+var d3 = _interopRequireWildcard(_d);
+
+var _ramda = __webpack_require__(326);
+
+var _utils = __webpack_require__(525);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+exports.default = function (div, _ref, _ref2) {
+    var dimensions = _ref.dimensions,
+        tuples = _ref.tuples;
+    var dimensionKey = _ref2.dimensionKey,
+        seriesKey = _ref2.seriesKey,
+        propName = _ref2.propName;
+
+    // Data
+    var dimension = dimensions[dimensionKey];
+    var series = dimensions[seriesKey];
+    var seriesIds = series.members;
+    var indexedTuples = (0, _ramda.groupBy)((0, _ramda.prop)(series.id), tuples);
+
+    // SVG Node
+    var svg = (0, _utils.selectOrAppend)(d3.select(div), 'svg');
+
+    // Presentation
+    var groupPalette = ['#42f495', '#2fd87e', '#22c16d', '#19a85c', '#0f8446', '#096634', '#09542b', '#2b704a', '#3f825d', '#5cb584'].reverse();
+
+    var _svg$node = svg.node(),
+        clientWidth = _svg$node.clientWidth,
+        clientHeight = _svg$node.clientHeight;
+
+    var margin = {
+        top: 10,
+        right: 10,
+        bottom: 10,
+        left: 10,
+        radius: 15
+    };
+    var chartWidth = clientWidth - margin.left - margin.right;
+    var chartHeight = clientHeight - margin.top - margin.bottom;
+    var chartRadius = Math.min(chartWidth, chartHeight) / 2 - margin.radius;
+
+    // Scale
+    var circular = d3.scaleLinear().domain([0, dimension.members.length]).range([0, Math.PI * 2]);
+    var radial = d3.scaleLinear().domain(d3.extent(tuples, function (tuple) {
+        return tuple[propName];
+    })).range([0, chartRadius]).nice();
+
+    // Axis
+    var radialAxis = d3.axisLeft(radial);
+
+    // Nodes
+    var radialchart = (0, _utils.selectOrAppend)(svg, 'g.radialchart').attr('transform', 'translate(' + (margin.left + chartWidth / 2) + ', ' + (margin.top + chartRadius + margin.radius) + ')');
+
+    // Trends
+    var radialLine = d3.radialLine().angle(function (_, index) {
+        return circular(index);
+    }).radius(function (tuple) {
+        return radial(tuple[propName]);
+    }).curve(d3.curveNatural);
+    var radialTrends = (0, _utils.selectOrAppend)(radialchart, 'g.chart').selectAll('path.segment').data(series.members);
+
+    radialTrends.exit().remove();
+    radialTrends.enter().append('path').classed('segment', true).classed('autostyle', true).merge(radialTrends).style('fill', function (group) {
+        return groupPalette[group];
+    }).style('fill-opacity', 0.05).style('stroke-width', 2).style('stroke', function (group) {
+        return groupPalette[group];
+    }).attr('d', function (serie) {
+        return radialLine([].concat(_toConsumableArray(indexedTuples[serie]), [indexedTuples[serie][0]]));
+    }).each(function (group) {
+        (0, _utils.addTooltip)(function () {
+            var dimensionIndex = Math.round(offsetToDimension(d3.event.offsetX - margin.left));
+            var dimensionMember = dimension.members[dimensionIndex];
+            return group + ', ' + dimensionMember + ': ' + nestedData[dimensionMember][group];
+        }, d3.select(this));
+    });
+
+    (0, _utils.selectOrAppend)(radialchart, 'g.radial-axis').attr('transform', 'translate(0, ' + -chartRadius + ')').call(radialAxis).classed('only-labels', true).selectAll('.tick').each(function (tick) {
+        var radius = radial(tick);
+        var tickG = d3.select(this);
+        tickG.selectAll('text').style('visibility', 'hidden');
+        (0, _utils.selectOrAppend)(tickG, 'circle').classed('grid', true).attr('cy', chartRadius - radius).attr('r', radius);
+    });
+
+    var circularTicks = (0, _utils.selectOrAppend)(radialchart, 'g.circular-axis').selectAll('g.tick').data(dimension.members);
+
+    circularTicks.exit().remove();
+    circularTicks.enter().append('g').classed('tick', true).merge(circularTicks).each(function (tick, index) {
+        var angle = circular(index) * 180 / Math.PI;
+        (0, _utils.selectOrAppend)(d3.select(this), 'text').text(tick).attr('transform', 'rotate(' + angle + '), translate(0, ' + -chartRadius + ')');
     });
 };
 

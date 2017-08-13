@@ -1,9 +1,13 @@
 svg {
-    height: 100%;
+    height: 250px;
     width: 100%;
     background: white;
     padding: 5px;
     box-shadow: 0 0 10px #BBB;
+}
+
+.col2 svg {
+    height: 100%;
 }
 
 svg path:not(.autostyle), svg line:not(.autostyle) {
@@ -21,8 +25,7 @@ svg .distal-axis .domain,
 svg .y-axis .domain {
     visibility: hidden;
 }
-svg .distal-axis circle,
-svg .y-axis line {
+svg .grid {
     stroke-dasharray: 4;
     stroke: #CCC;
     fill: none;
@@ -37,7 +40,7 @@ svg .chart .segment:not(.autostyle) {
 }
 svg .chart .segment:not(.autostyle) {
     stroke: none;
-    transition: opacity 0.444s;
+    /*transition: opacity 0.444s;*/
 }
 svg .chart:hover .segment {
     opacity: 0.3;

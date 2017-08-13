@@ -16,7 +16,8 @@
 	font-weight: normal;
 }
 
-#sidebar a {
+#sidebar a, 
+#sidebar p {
 	color: #DDD;
 	padding: 3px;
 }

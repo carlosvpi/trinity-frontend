@@ -1,7 +1,12 @@
 import React from 'react'
 require('../styles/sidebar.css')
 
-const Sidebar = ({ groupBy, aggregateBy, uniqueness }) => (<div id="sidebar">
+const Sidebar = ({ groupBy, aggregateBy, uniqueness, connecting }) => (<div id="sidebar">
+		{
+			connecting > 0
+				? (<p>Connecting to the server (showing mock data)</p>)
+				: ''
+		}
 		<div id="group-by">
 			<h2>Group by</h2>
 			<ul>

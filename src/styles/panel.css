@@ -1,6 +1,6 @@
 .panel {
 	float: left;
-	height: 40%;
+	height: 42%;
 	width: 25%;
 	padding: 8px;
 	overflow: scroll;
@@ -13,4 +13,11 @@
 .panel.row2 {
 	height: 80%;
 	float: right;
+}
+
+.panel h3 {
+	font-size: 14px;
+	font-weight: normal;
+	padding-left: 10px;
+	padding-bottom: 10px;
 }

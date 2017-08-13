@@ -19,8 +19,9 @@ class Panel extends React.Component {
 		window.addEventListener('resize', () => this.update(this.props));
 	}
 	render () {
-		const { id, chart, className } = this.props
+		const { id, chart, className, title } = this.props
 		return <div className={`panel ${className}`} id={ id }>
+			<h3>{ title || '' }</h3>
 		</div>
 	}
 }
